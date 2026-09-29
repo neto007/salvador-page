@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SDN · Salvador Dilio — DevSecOps & AppSec</title>
+  <meta name="description" content="Portfólio de Salvador Dilio Neto — DevSecOps & Application Security. Projetos, ferramentas e segurança do commit à produção.">
+  <meta property="og:title" content="SDN · Salvador Dilio — DevSecOps & AppSec">
+  <meta property="og:description" content="Portfólio gamificado: projetos de DevSecOps e AppSec.">
+  <meta property="og:image" content="assets/game/og.webp">
+  <meta name="theme-color" content="#050a06">
+  <link rel="icon" href="assets/game/badge.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Press+Start+2P&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== PRESS START ===== -->
+  <div id="start" role="dialog" aria-label="Tela inicial">
+    <div class="start-inner">
+      <img class="start-badge" src="assets/game/badge.webp" alt="" width="220" height="220">
+      <p class="px start-title">SECURE<span class="g3">://</span>QUEST</p>
+      <p class="px start-sub">SALVADOR DILIO · DEVSECOPS EDITION</p>
+      <button class="px start-btn" id="start-btn">PRESS START</button>
+      <p class="start-hint">qualquer tecla · clique · toque</p>
+    </div>
+    <p class="px start-copy">© <span class="year"></span> SDN GAMES — INSERT COFFEE</p>
+  </div>
+
+  <div class="crt" aria-hidden="true"></div>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav">
+    <a href="#top" class="nav-logo" aria-label="Início">
+      <img src="assets/game/badge.webp" alt="" width="40" height="40">
+      <span class="teko">SDN</span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="#perfil">Perfil</a></li>
+      <li><a href="#loadout">Loadout</a></li>
+      <li><a href="#quests">Quests</a></li>
+      <li><a href="#conquistas">Conquistas</a></li>
+      <li><a href="#arcade">Arcade</a></li>
+      <li><a href="#party" class="nav-cta">Join Party</a></li>
+    </ul>
+    <button class="sfx px" id="sfx" aria-pressed="false" title="Efeitos sonoros">SFX: OFF</button>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" data-checkpoint="START">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="hero-word teko">SDN</span>
+        <span class="slash s1"></span><span class="slash s2"></span><span class="slash s3"></span>
+      </div>
+
+      <div class="hero-copy">
+        <p class="px chip">▶ PLAYER 1 · READY</p>
+        <h1 class="teko hero-name"><span>SALVADOR</span><span class="outline">DILIO</span></h1>
+        <p class="hero-role teko">DEVSECOPS <i>/</i> APPLICATION SECURITY</p>
+        <p class="hero-sub">
+          Eu transformo segurança em parte do jogo de engenharia: pipelines que barram vulnerabilidades
+          antes do merge, automação que escala e cloud com guardrails — do commit à produção.
+        </p>
+        <div class="hero-cta">
+          <a href="#quests" class="btn btn-main"><span>▶ Ver quests</span></a>
+          <a href="#arcade" class="btn btn-alt"><span>Jogar Bug Hunt</span></a>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <img class="mascot" src="assets/game/mascot.webp" alt="Mascote do Salvador em estilo eSports segurando um escudo" width="720" height="960">
+        <aside class="player-card">
+          <div class="pc-head">
+            <img src="assets/game/portrait.png" alt="" width="56" height="56" class="pixel">
+            <div>
+              <p class="px pc-tag">SDN</p>
+              <p class="teko pc-rank">RANK: SHIFT-LEFT MASTER</p>
+            </div>
+            <p class="px pc-lvl">LV<b>08</b></p>
+          </div>
+          <dl class="pc-stats">
+            <div><dt>Bugs eliminados</dt><dd class="teko" data-count="9999">0</dd></div>
+            <div><dt>Pipelines protegidos</dt><dd class="teko" data-count="120">0</dd></div>
+            <div><dt>Anos de XP</dt><dd class="teko" data-count="8">0</dd></div>
+          </dl>
+        </aside>
+      </div>
+
+      <a href="#perfil" class="scroll-cue px" aria-label="Rolar">SCROLL ▼</a>
+    </section>
+
+    <!-- ===== PERFIL ===== -->
+    <section id="perfil" class="section" data-checkpoint="PERFIL">
+      <header class="sec-head">
+        <p class="px sec-num">STAGE 01</p>
+        <h2 class="teko">Perfil do jogador</h2>
+      </header>
+
+      <div class="profile">
+        <div class="dialog reveal">
+          <img src="assets/game/portrait.png" alt="Retrato pixel art do Salvador" class="dialog-face pixel" width="160" height="160">
+          <div class="dialog-box">
+            <p class="px dialog-name">SALVADOR</p>
+            <p class="dialog-text" id="dialog-text"></p>
+            <button class="px dialog-next" id="dialog-next" aria-label="Próxima fala">▼</button>
+          </div>
+        </div>
+
+        <div class="attrs reveal">
+          <p class="px attrs-title">ATRIBUTOS</p>
+          <ul>
+            <li><span>AppSec</span><b class="bar"><i style="--v:95"></i></b><em>95</em></li>
+            <li><span>DevSecOps</span><b class="bar"><i style="--v:95"></i></b><em>95</em></li>
+            <li><span>Automação</span><b class="bar"><i style="--v:90"></i></b><em>90</em></li>
+            <li><span>Cloud Security</span><b class="bar"><i style="--v:85"></i></b><em>85</em></li>
+            <li><span>Threat Modeling</span><b class="bar"><i style="--v:85"></i></b><em>85</em></li>
+            <li><span>Mentoria</span><b class="bar"><i style="--v:88"></i></b><em>88</em></li>
+          </ul>
+          <p class="attrs-foot">Classe: <b>Guardião do Pipeline</b> · Base: Maringá, PR — BR</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LOADOUT ===== -->
+    <section id="loadout" class="section section-level" data-checkpoint="LOADOUT">
+      <header class="sec-head">
+        <p class="px sec-num">STAGE 02</p>
+        <h2 class="teko">Loadout</h2>
+        <p class="sec-intro">Os equipamentos que uso em campo. Passe o mouse (ou toque) num slot.</p>
+      </header>
+
+      <div class="loadout reveal">
+        <ul class="inventory" id="inventory">
+          <li><button data-item="0"><span class="icon" style="--i:0"></span></button></li>
+          <li><button data-item="1"><span class="icon" style="--i:1"></span></button></li>
+          <li><button data-item="2"><span class="icon" style="--i:2"></span></button></li>
+          <li><button data-item="3"><span class="icon" style="--i:3"></span></button></li>
+          <li><button data-item="4"><span class="icon" style="--i:4"></span></button></li>
+          <li><button data-item="5"><span class="icon" style="--i:5"></span></button></li>
+          <li><button data-item="6"><span class="icon" style="--i:6"></span></button></li>
+          <li><button data-item="7"><span class="icon" style="--i:7"></span></button></li>
+        </ul>
+        <article class="item-card" id="item-card" aria-live="polite">
+          <span class="icon big" id="item-icon" style="--i:0"></span>
+          <p class="px item-rarity" id="item-rarity"></p>
+          <h3 class="teko" id="item-name"></h3>
+          <p id="item-desc"></p>
+          <ul class="tags" id="item-tags"></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== QUESTS (PROJETOS) ===== -->
+    <section id="quests" class="section" data-checkpoint="QUESTS">
+      <header class="sec-head">
+        <p class="px sec-num">STAGE 03</p>
+        <h2 class="teko">Quest log</h2>
+        <p class="sec-intro">Projetos e missões concluídas. Filtre por categoria.</p>
+      </header>
+
+      <div class="filters reveal" role="tablist">
+        <button class="px on" data-f="all">TODAS</button>
+        <button class="px" data-f="appsec">APPSEC</button>
+        <button class="px" data-f="devsecops">DEVSECOPS</button>
+        <button class="px" data-f="cloud">CLOUD</button>
+        <button class="px" data-f="tools">TOOLS</button>
+      </div>
+
+      <!-- TODO: substitua pelos seus projetos reais (título, descrição, stack, links) -->
+      <div class="quests" id="quests-grid">
+        <article class="quest reveal" data-cat="devsecops">
+          <header><span class="px q-status done">COMPLETA</span><span class="q-diff" title="Dificuldade">★★★★☆</span></header>
+          <h3 class="teko">Pipeline Blindado</h3>
+          <p>Template de CI/CD com gates de SAST, SCA, secret scanning e scan de imagem — falha o build só no que importa.</p>
+          <p class="q-reward"><span class="px">REWARD</span> −70% de vulns chegando em produção</p>
+          <ul class="tags"><li>GitHub Actions</li><li>Semgrep</li><li>Trivy</li><li>Gitleaks</li></ul>
+          <footer><a href="#" class="q-link">Repo ↗</a><a href="#" class="q-link">Case ↗</a></footer>
+        </article>
+        <article class="quest reveal" data-cat="cloud">
+          <header><span class="px q-status done">COMPLETA</span><span class="q-diff">★★★★★</span></header>
+          <h3 class="teko">Policy-as-Code Guardian</h3>
+          <p>Políticas OPA/Conftest aplicadas a Terraform e Kubernetes, bloqueando configurações inseguras antes do apply.</p>
+          <p class="q-reward"><span class="px">REWARD</span> Guardrails automáticos em toda a cloud</p>
+          <ul class="tags"><li>OPA</li><li>Terraform</li><li>Kubernetes</li><li>AWS</li></ul>
+          <footer><a href="#" class="q-link">Repo ↗</a></footer>
+        </article>
+        <article class="quest reveal" data-cat="appsec">
+          <header><span class="px q-status done">COMPLETA</span><span class="q-diff">★★★☆☆</span></header>
+          <h3 class="teko">Threat Model Kit</h3>
+          <p>Kit de modelagem de ameaças com STRIDE, templates e checklists para os times usarem já no design.</p>
+          <p class="q-reward"><span class="px">REWARD</span> Segurança discutida antes da 1ª linha de código</p>
+          <ul class="tags"><li>STRIDE</li><li>OWASP</li><li>ASVS</li></ul>
+          <footer><a href="#" class="q-link">Docs ↗</a></footer>
+        </article>
+        <article class="quest reveal" data-cat="tools">
+          <header><span class="px q-status wip">EM ANDAMENTO</span><span class="q-diff">★★★★☆</span></header>
+          <h3 class="teko">Vuln Triage Bot</h3>
+          <p>Automação que deduplica, prioriza por risco e abre tickets de vulnerabilidades direto para o time dono.</p>
+          <p class="q-reward"><span class="px">REWARD</span> Menos ruído, MTTR menor</p>
+          <ul class="tags"><li>Python</li><li>APIs</li><li>Jira</li></ul>
+          <footer><a href="#" class="q-link">Repo ↗</a></footer>
+        </article>
+        <article class="quest reveal" data-cat="appsec">
+          <header><span class="px q-status done">COMPLETA</span><span class="q-diff">★★★☆☆</span></header>
+          <h3 class="teko">Secrets Hunter</h3>
+          <p>Varredura contínua de segredos em repositórios e histórico git, com rotação guiada e alertas.</p>
+          <p class="q-reward"><span class="px">REWARD</span> 0 credenciais expostas</p>
+          <ul class="tags"><li>Gitleaks</li><li>Vault</li><li>CI</li></ul>
+          <footer><a href="#" class="q-link">Repo ↗</a></footer>
+        </article>
+        <article class="quest reveal" data-cat="cloud">
+          <header><span class="px q-status wip">EM ANDAMENTO</span><span class="q-diff">★★★★☆</span></header>
+          <h3 class="teko">Cloud Posture Radar</h3>
+          <p>Painel de postura de segurança cloud com achados priorizados e trilha de correção por conta/time.</p>
+          <p class="q-reward"><span class="px">REWARD</span> Visibilidade de risco em tempo real</p>
+          <ul class="tags"><li>AWS</li><li>CSPM</li><li>Dashboards</li></ul>
+          <footer><a href="#" class="q-link">Repo ↗</a></footer>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== CONQUISTAS + CARREIRA ===== -->
+    <section id="conquistas" class="section section-level" data-checkpoint="CONQUISTAS">
+      <header class="sec-head">
+        <p class="px sec-num">STAGE 04</p>
+        <h2 class="teko">Conquistas</h2>
+      </header>
+
+      <div class="trophies">
+        <div class="trophy reveal"><span class="t-ico px">DEPC</span><div><p class="px t-state">DESBLOQUEADA</p><h3 class="teko">DevOps Essentials Professional</h3><p>CertiProf®</p></div></div>
+        <div class="trophy reveal"><span class="t-ico px">SFPC</span><div><p class="px t-state">DESBLOQUEADA</p><h3 class="teko">Scrum Foundation Professional</h3><p>CertiProf®</p></div></div>
+        <div class="trophy reveal"><span class="t-ico px">AWS</span><div><p class="px t-state">DESBLOQUEADA</p><h3 class="teko">AWS na Prática</h3><p>Universidade Estabilis</p></div></div>
+        <div class="trophy locked reveal"><span class="t-ico px">???</span><div><p class="px t-state">BLOQUEADA</p><h3 class="teko">Próxima conquista</h3><p>Em progresso...</p></div></div>
+      </div>
+
+      <header class="sec-head sub">
+        <p class="px sec-num">MATCH HISTORY</p>
+        <h2 class="teko">Carreira</h2>
+      </header>
+      <!-- TODO: ajuste cargos e períodos -->
+      <ol class="matches">
+        <li class="match reveal"><span class="px m-res win">ATUAL</span><div><h3 class="teko">DevSecOps / AppSec — Grupo Boticário</h3><p>Segurança de aplicações e plataforma em escala, automação de controles e apoio aos times de engenharia.</p></div></li>
+        <li class="match reveal"><span class="px m-res">8+ ANOS</span><div><h3 class="teko">DevOps → DevSecOps</h3><p>Infraestrutura, automação e segurança da informação, evoluindo para Application Security.</p></div></li>
+        <li class="match reveal"><span class="px m-res">TUTORIAL</span><div><h3 class="teko">UniCesumar</h3><p>Formação em tecnologia.</p></div></li>
+      </ol>
+    </section>
+
+    <!-- ===== ARCADE ===== -->
+    <section id="arcade" class="section" data-checkpoint="ARCADE">
+      <header class="sec-head">
+        <p class="px sec-num">BONUS STAGE</p>
+        <h2 class="teko">Bug Hunt</h2>
+        <p class="sec-intro">Pule os bugs, colete os cadeados. <b>Espaço</b> / <b>↑</b> / toque para pular.</p>
+      </header>
+      <div class="arcade reveal">
+        <canvas id="game" width="960" height="300" aria-label="Mini game Bug Hunt"></canvas>
+        <div class="arcade-hud px"><span>SCORE <b id="g-score">0</b></span><span>HI <b id="g-hi">0</b></span></div>
+        <div class="arcade-overlay" id="g-overlay">
+          <p class="px" id="g-msg">PRESS START</p>
+          <button class="btn btn-main" id="g-start"><span>▶ Jogar</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PARTY / CONTATO ===== -->
+    <section id="party" class="section party" data-checkpoint="PARTY">
+      <img class="rival" src="assets/game/rival.webp" alt="" width="360" height="360" aria-hidden="true">
+      <header class="sec-head">
+        <p class="px sec-num">MULTIPLAYER</p>
+        <h2 class="teko">Join the party</h2>
+        <p class="sec-intro">Tem um pipeline para blindar, um time para treinar ou um bug-boss para derrubar? Manda o convite.</p>
+      </header>
+      <div class="party-links">
+        <a class="btn btn-main" href="https://www.linkedin.com/in/salvador-dilio-neto-62b8a0127/" target="_blank" rel="noopener"><span>LinkedIn</span></a>
+        <!-- TODO: ajuste GitHub e e-mail -->
+        <a class="btn btn-alt" href="https://github.com/" target="_blank" rel="noopener"><span>GitHub</span></a>
+        <a class="btn btn-alt" href="mailto:seu-email@exemplo.com"><span>E-mail</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="px">CONTINUE? <span class="blink">▮</span> © <span class="year"></span> SALVADOR DILIO NETO</p>
+    <p class="konami">psst… ↑ ↑ ↓ ↓ ← → ← → B A</p>
+  </footer>
+
+  <!-- ===== SCROLL HUD: o personagem anda conforme você rola ===== -->
+  <div class="hud" aria-hidden="true">
+    <div class="hud-track" id="hud-track">
+      <div class="hud-player sprite" id="hud-player"></div>
+    </div>
+    <div class="hud-info px"><span id="hud-stage">START</span><span>XP <b id="hud-xp">0</b>%</span></div>
+  </div>
+  <div class="toast px" id="toast" role="status"></div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
